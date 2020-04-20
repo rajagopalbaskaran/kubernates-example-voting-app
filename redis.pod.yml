@@ -1,0 +1,16 @@
+apiVersion: v1
+
+kind: Pod
+
+meatadata: 
+  name: redis-pod
+  labels:
+    name: redis-pod
+    app:  demo-redis-app
+
+spec:
+  containers:
+    - name: redis
+      image: redis
+      ports:
+        - containerPort: 6379
